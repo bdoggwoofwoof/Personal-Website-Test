@@ -685,9 +685,10 @@ textarea.form-input {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
-  /* iOS Safari: fixed attachment causes broken/missing backgrounds */
+  /* Remove complex background on mobile — background-size: 100% 100% can
+     cause iOS to compute extra scrollable height beyond the footer */
   body {
-    background-attachment: scroll, scroll;
+    background-image: none;
   }
 
   .about-content,
