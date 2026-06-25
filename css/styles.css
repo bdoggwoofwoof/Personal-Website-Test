@@ -159,14 +159,6 @@ a {
   text-align: center;
 }
 
-.dark-section-icon {
-  display: block;
-  margin: 0 auto 2rem;
-  width: 40px;
-  height: 28px;
-  opacity: 0.85;
-}
-
 .dark-section p {
   font-size: 2.2rem;
   line-height: 1.55;
@@ -678,12 +670,38 @@ textarea.form-input {
   object-fit: cover;
 }
 
+/* Mobile-only images (hidden on desktop, shown inline on mobile after headings) */
+.mobile-inline-image { display: none; }
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
+  /* iOS Safari: fixed attachment causes broken/missing backgrounds */
+  body {
+    background-attachment: scroll, scroll;
+  }
+
   .about-content,
   .contact-content {
     grid-template-columns: 1fr;
     gap: 2.5rem;
+  }
+
+  /* Hide side-column images; show inline versions after headings instead */
+  .about-image-col { display: none; }
+  .contact-image-wrap { display: none; }
+
+  .mobile-inline-image {
+    display: block;
+    margin: 1.5rem 0 2rem;
+  }
+
+  .mobile-inline-image .about-image,
+  .mobile-inline-image .contact-image {
+    min-height: 0;
+    height: 320px;
+    max-width: 280px;
+    margin: 0 auto;
+    border-radius: 999px 999px 0 0;
   }
 
   .offerings-grid {
@@ -710,7 +728,9 @@ textarea.form-input {
   }
 
   .hero-image {
-    aspect-ratio: 3 / 2;
+    aspect-ratio: 3 / 4;
+    max-width: 320px;
+    margin: 0 auto;
     border-radius: 999px 999px 0 0;
   }
 
@@ -724,17 +744,21 @@ textarea.form-input {
   }
 
   .footer-nav {
-    justify-items: center;
+    align-items: center;
   }
+
+  /* Larger tap targets for nav links */
+  .nav-links a { padding: 0.5em 0.3em; }
 
   .logo-stacked { font-size: 2.6rem; }
   .page-title { font-size: 3rem; }
-  .contact-image { min-height: 320px; height: 380px; }
-  .contact-image-wrap { justify-content: center; }
 }
 
 @media (max-width: 600px) {
   .form-row { grid-template-columns: 1fr; }
   .logo-stacked { font-size: 2.1rem; }
   .page-title { font-size: 2.5rem; }
+  .dark-section p { font-size: 1.4rem; }
+  /* Prevent iOS Safari auto-zoom on input focus (requires ≥ 16px) */
+  .form-input { font-size: 1rem; }
 }
