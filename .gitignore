@@ -1,0 +1,23 @@
+# Environment & secrets
+.env
+credentials.json
+token.json
+
+# Temporary files
+.tmp/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Claude
+.claude/
+
+# Large reference images (not part of the site)
+www.juliajarrold.com_*.png
+Home.png
+IMG_*.JPG
+IMG_*.jpg
+111.jpg
+112.jpg
