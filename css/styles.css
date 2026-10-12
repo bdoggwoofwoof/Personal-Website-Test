@@ -689,6 +689,26 @@ textarea.form-input {
     background-image: none;
   }
 
+  /* Keep the darkest mountain pinned to the bottom of the screen on mobile.
+     A fixed pseudo-element avoids the iOS extra-scroll issue above. It sits in
+     front of the page so it is always visible; the footer gets extra bottom
+     padding so its links are never hidden underneath it. */
+  body::after {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 80px;
+    background: url('../images/mountain-front.svg') center bottom / cover no-repeat;
+    z-index: 50;
+    pointer-events: none;
+  }
+
+  .site-footer {
+    padding-bottom: calc(1.8rem + 80px);
+  }
+
   .about-content,
   .contact-content {
     grid-template-columns: 1fr;
