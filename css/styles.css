@@ -678,6 +678,73 @@ textarea.form-input {
   object-fit: cover;
 }
 
+/* ===== STATUS, INTERESTS, CRISIS NOTES ===== */
+.status-note {
+  font-family: var(--body-font);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.hero-content .status-note {
+  font-size: 0.78rem;
+  line-height: 1.6;
+  margin-top: -1.2rem;
+  margin-bottom: 2rem;
+}
+
+.about-text .section-title {
+  font-family: var(--heading-font);
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 2rem 0 0.8rem;
+}
+
+.interest-list {
+  list-style: none;
+  margin: 0 0 1.2rem;
+}
+
+.interest-list li {
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 0.45rem;
+}
+
+.interest-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.side-link {
+  margin-top: 1.4rem;
+}
+
+.crisis-note {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  max-width: 420px;
+  margin-bottom: 2rem;
+  padding: 0.8rem 1rem;
+  border-left: 3px solid var(--dark-accent);
+  background: hsla(43, 37%, 87%, 0.6);
+}
+
+.crisis-note a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 /* Mobile-only images (hidden on desktop, shown inline on mobile after headings) */
 .mobile-inline-image { display: none; }
 
@@ -699,14 +766,14 @@ textarea.form-input {
     left: 0;
     right: 0;
     bottom: 0;
-    height: 80px;
+    height: 44px;
     background: url('../images/mountain-front.svg') center bottom / cover no-repeat;
     z-index: 50;
     pointer-events: none;
   }
 
   .site-footer {
-    padding-bottom: calc(1.8rem + 80px);
+    padding-bottom: calc(1.8rem + 44px);
   }
 
   .about-content,

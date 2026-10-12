@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Layered Blue Ridge mountains at sunrise">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="hsl(36, 38%, 86%)"/>
+      <stop offset="0.45" stop-color="hsl(34, 45%, 82%)"/>
+      <stop offset="0.75" stop-color="hsl(30, 48%, 76%)"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.62" cy="0.40" r="0.45">
+      <stop offset="0" stop-color="hsl(38, 70%, 90%)" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="hsl(38, 70%, 90%)" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="mist" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="hsl(38, 35%, 90%)" stop-opacity="0"/>
+      <stop offset="0.55" stop-color="hsl(38, 35%, 90%)" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="hsl(38, 35%, 90%)" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="1200" fill="url(#sky)"/>
+  <rect width="800" height="1200" fill="url(#glow)"/>
+  <circle cx="500" cy="470" r="70" fill="hsl(32, 55%, 70%)"/>
+
+  <!-- Ridges, farthest to nearest -->
+  <path d="M0,560 C90,520 170,545 250,515 C330,485 400,530 480,505 C560,480 640,520 720,495 C760,483 790,492 800,488 L800,1200 L0,1200 Z" fill="hsl(38, 20%, 84%)"/>
+  <rect y="520" width="800" height="90" fill="url(#mist)"/>
+  <path d="M0,630 C110,590 200,622 300,592 C400,562 470,612 560,585 C650,558 730,600 800,580 L800,1200 L0,1200 Z" fill="hsl(40, 14%, 76%)"/>
+  <rect y="600" width="800" height="90" fill="url(#mist)"/>
+  <path d="M0,712 C100,668 210,705 320,672 C430,639 520,694 620,660 C700,633 760,668 800,655 L800,1200 L0,1200 Z" fill="hsl(48, 9%, 65%)"/>
+  <rect y="690" width="800" height="80" fill="url(#mist)" opacity="0.8"/>
+  <path d="M0,800 C130,755 240,795 370,760 C500,725 590,785 700,752 C750,737 785,752 800,748 L800,1200 L0,1200 Z" fill="hsl(80, 8%, 52%)"/>
+  <rect y="780" width="800" height="70" fill="url(#mist)" opacity="0.55"/>
+  <path d="M0,900 C120,850 250,900 380,860 C510,820 620,880 730,848 C765,838 790,846 800,844 L800,1200 L0,1200 Z" fill="hsl(92, 11%, 38%)"/>
+  <path d="M0,1010 C150,955 280,1005 420,965 C560,925 680,985 800,955 L800,1200 L0,1200 Z" fill="hsl(92, 12%, 26%)"/>
+  <path d="M0,1110 C170,1065 330,1110 480,1080 C620,1052 720,1090 800,1075 L800,1200 L0,1200 Z" fill="hsl(100, 16%, 15%)"/>
+</svg>
